@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo.svg">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&family=Quicksand:wght@600&family=Teko:wght@500&display=swap" rel="stylesheet">
+		<title>Formulario ejemplo</title>
+</head>
+<body>
+    <main>
+			<div id="inicio">
+        <h1>Formulario sobre</h1>
+				<img src="img/logo-hk.png" alt="Logo hollow knight" id="hk">
+			</div>
+				<form action="" method="post" id="formulario">
+					<h5>No te preocupes toda la información registrada será protegida.</h5>
+
+					<label class="titulos" for="name">Nombre</label>
+					<input class="bloque cuadro medidas respuesta" type="text" name="name" id="name" placeholder="Ingresa tu nombre">
+
+					<label class="titulos" for="edad">Edad</label>
+					<input class="bloque cuadro medidas respuesta" type="number" name="edad" id="edad" placeholder="Ingresa tu edad">
+
+					<label class="titulos" for="email">Email</label>
+					<input class="bloque cuadro medidas respuesta" type="email" name="email" id="email" placeholder="Ingresa un email">
+
+					<label class="titulos" for="info">¿Como supiste de este juego?</label>
+					<select class="bloque cuadro medidas respuesta" name="info" id="info">
+						<option value="" selected>Seleccione una opción</option>
+						<option value="1">En un anuncio</option>
+						<option value="2">Por un amigo</option>
+						<option value="3">En una red social (Grupos, publicaciones, etc)</option>
+						<option value="4">En un servicio de suscripción (Game Pass, playStation+)</option>
+						<option value="5">Otro medio</option>
+					</select>
+
+					<label class="titulos" for="fecha">¿Cuándo fue que empezaste a jugar?</label>
+					<input class="bloque cuadro medidas respuesta" type="date" name="fecha" id="fecha">
+
+					<p class="titulos">¿Dirías que Hollow Knight es tu videojuego favorito?</p>
+					<input type="radio" id="miFav" name="fav" value="miFav">
+					<label for="miFav" class="respuesta">¡Por supuesto! Me encanta</label><br>
+					<input type="radio" id="like" name="fav" value="like">
+					<label for="like" class="respuesta">No exactamente, pero si me gusta</label><br>
+					<input type="radio" id="nop" name="fav" value="nop">
+					<label for="nop" class="respuesta">No realmente</label>
+
+					<p class="titulos">¿Cuál es o son tus zonas favoritas de Hollow Knight?</p>
+					<div class="contenedor">
+					<div>
+					<input type="checkbox" id="zona1" name="zona1" value="Bocasucia">
+  				<label for="zona1" class="respuesta">Bocasucia</label><br>
+					<input type="checkbox" id="zona2" name="zona2" value="Cruces Olvidados">
+  				<label for="zona2" class="respuesta">Cruces Olvidados</label><br>
+					<input type="checkbox" id="zona3" name="zona3" value="Sendero Verde">
+  				<label for="zona3" class="respuesta">Sendero Verde</label><br>
+					<input type="checkbox" id="zona4" name="zona4" value="Páramos Fungicos">
+  				<label for="zona4" class="respuesta">Páramos Fungicos</label><br>
+					<input type="checkbox" id="zona5" name="zona5" value="Ciudad De Lágrimas">
+  				<label for="zona5" class="respuesta">Ciudad De Lágrimas</label><br>
+					<input type="checkbox" id="zona6" name="zona6" value="Cumbre De Crital">
+  				<label for="zona6" class="respuesta">Cumbre De Crital</label><br>
+					<input type="checkbox" id="zona7" name="zona7" value="Tierras De Reposo">
+  				<label for="zona7" class="respuesta">Tierras De Reposo</label><br>
+					<input type="checkbox" id="zona8" name="zona8" value="Límite Del Reino">
+  				<label for="zona8" class="respuesta">Limite Del Reino</label><br>
+					<input type="checkbox" id="zona9" name="zona9" value="Cañón Nublado">
+  				<label for="zona9" class="respuesta">Cañón Nublado</label><br>
+					<input type="checkbox" id="zona10" name="zona10" value="Canales Reales">
+  				<label for="zona10" class="respuesta">Canales Reales</label><br>
+					<input type="checkbox" id="zona11" name="zona11" value="Cuenca Antigua">
+  				<label for="zona11" class="respuesta">Cuenca Antigua</label><br>
+					<input type="checkbox" id="zona12" name="zona12" value="Nido Profundo">
+  				<label for="zona12" class="respuesta">Nido Profundo</label><br>
+					<input type="checkbox" id="zona13" name="zona13" value="La Colmena">
+  				<label for="zona13" class="respuesta">La Colmena</label><br>
+					<input type="checkbox" id="zona14" name="zona14" value="Jardines De La Reina">
+  				<label for="zona14" class="respuesta">Jardines De La Reina</label><br>
+					<input type="checkbox" id="zona15" name="zona15" value="Acantilados Aulladores">
+  				<label for="zona15" class="respuesta">Acantilados Aulladores</label><br>
+					<input type="checkbox" id="zona16" name="zona16" value="Cruces Infectados">
+  				<label for="zona16" class="respuesta">Cruces Infectados</label><br>
+					<input type="checkbox" id="zona17" name="zona17" value="Palacio Blanco">
+  				<label for="zona17" class="respuesta">Palacio Blanco</label><br>
+					<input type="checkbox" id="zona18" name="zona18" value="Hogar De Dioses">
+  				<label for="zona18" class="respuesta">Hogar De Dioses</label><br><br>
+					</div>
+
+					<div class="second">
+						<div class="carousel" id="carusel">
+							<button id="retroceder" class="oculto">◀</button>
+							<div id="imagen"></div>
+							<button id="avanzar" class="oculto">▶</button>
+					</div>
+					</div>
+					</div>
+
+					<label for="datos" class="titulos">¿Qué opinas del juego en general?</label>
+					<textarea class="bloque cuadro medidas respuesta" name="datos" id="datos" cols="30" rows="2"></textarea><br>
+
+					<input style="margin-bottom: 5vh;" type="submit" value="Enviar" class="medidas respuesta">
+				</form>
+    </main>
+		<footer>Página creado por Candelario Ramos Jiménez.©</footer>
+		<script src="js/carrusel.js"></script>
+		<script src="js/formulario.js"></script>
+</body>
+</html>
