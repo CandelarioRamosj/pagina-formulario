@@ -21,28 +21,32 @@
 
 					<label class="titulos" for="name">Nombre</label>
 					<input class="bloque cuadro medidas respuesta" type="text" name="name" id="name" placeholder="Ingresa tu nombre">
+          <label class="class-oculto" id="label-name">Por favor ingrese un nombre valido. Debe contener al menos 3 caracteres.</label>
 
 					<label class="titulos" for="edad">Edad</label>
 					<input class="bloque cuadro medidas respuesta" type="number" name="edad" id="edad" placeholder="Ingresa tu edad">
+          <label class="class-oculto" id="label-edad">Por favor ingrese una edad valida.</label>
 
 					<label class="titulos" for="email">Email</label>
 					<input class="bloque cuadro medidas respuesta" type="email" name="email" id="email" placeholder="Ingresa un email">
+          <label class="class-oculto" id="label-email">Por favor ingrese una email valido.</label>
 
 					<label class="titulos" for="info">¿Como supiste de este juego?</label>
 					<select class="bloque cuadro medidas respuesta" name="info" id="info">
-						<option value="" selected>Seleccione una opción</option>
+						<option value="" selected disabled>Seleccione una opción</option>
 						<option value="1">En un anuncio</option>
 						<option value="2">Por un amigo</option>
 						<option value="3">En una red social (Grupos, publicaciones, etc)</option>
 						<option value="4">En un servicio de suscripción (Game Pass, playStation+)</option>
 						<option value="5">Otro medio</option>
 					</select>
+          <label class="class-oculto" id="label-info">Por favor seleccione una opción.</label>
 
 					<label class="titulos" for="fecha">¿Cuándo fue que empezaste a jugar?</label>
 					<input class="bloque cuadro medidas respuesta" type="date" name="fecha" id="fecha">
 
 					<p class="titulos">¿Dirías que Hollow Knight es tu videojuego favorito?</p>
-					<input type="radio" id="miFav" name="fav" value="miFav">
+					<input type="radio" id="miFav" name="fav" value="miFav" checked>
 					<label for="miFav" class="respuesta">¡Por supuesto! Me encanta</label><br>
 					<input type="radio" id="like" name="fav" value="like">
 					<label for="like" class="respuesta">No exactamente, pero si me gusta</label><br>

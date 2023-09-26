@@ -9,7 +9,7 @@ form {
     background-color: #283747;
     padding-left: 5%;
     padding-right: 5%;
-	box-shadow: 3vh 3vh 10px #1d2833;
+	  box-shadow: 3vh 3vh 10px #1d2833;
 }
 
 h1 {
@@ -56,9 +56,9 @@ h5 {
 }
 
 .second {
-	margin-left: 10vh;
-	width: 43vh;
-	display: flex;
+	  margin-left: 10vh;
+	  width: 43vh;
+	  display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -107,4 +107,17 @@ button {
     align-items: center;
     height: 20vh;
     padding-top: 3vh;
+}
+
+.class-oculto {
+    display: none;
+}
+
+.class-invalido {
+    display: block;
+    font-family: 'Quicksand', sans-serif;
+    font-size: small;
+    margin-top: -1.5vh;
+    margin-bottom: 1.5vh;
+    color: #e22b2b
 }
