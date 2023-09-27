@@ -9,13 +9,13 @@ boton.addEventListener('click',function(e){
   let email = document.getElementById('email')
   let info = document.getElementById('info')
   let fecha = document.getElementById('fecha')
-  let fav = document.querySelector('input[name="fav"]:checked')?.value
+  let fav = document.querySelector('input[name="fav"]:checked')//Comprueba que radio esta seeccionado
   let zonas = ""
   for(let i = 1; i <= 18; i++){
     let isChecked = document.getElementById('zona'+ i).checked;
     if(isChecked) zonas += document.getElementById('zona' + i).value + " "
   }
-  let datos = document.getElementById('datos').value
+  let datos = document.getElementById('datos')
   
   //Validar cada input
   if(nombre.value.length<3){
@@ -26,7 +26,7 @@ boton.addEventListener('click',function(e){
     nombre.style.borderColor = '#29c424'
   }
 
-  if(edad.value < 1){
+  if(edad.value < 1 || edad.value > 100){
     document.getElementById('label-edad').className = 'class-invalido'
     edad.style.borderColor = '#e22b2b'
   }else {
@@ -51,5 +51,39 @@ boton.addEventListener('click',function(e){
   }else {
     document.getElementById('label-info').className = 'class-oculto'
     info.style.borderColor = '#29c424'
+  }
+
+  let fechaEstreno = '2017-02-24'
+  // crea un nuevo objeto `Date`
+  let today = new Date()
+  // obtener la fecha de hoy en formato `MM/DD/YYYY`
+  let now = today.toLocaleDateString('fr-CA')
+
+  if(fecha.value === "" || fecha.value < fechaEstreno || fecha.value > now){
+    document.getElementById('label-fecha').className = 'class-invalido'
+    fecha.style.borderColor = '#e22b2b'
+  }else {
+    document.getElementById('label-fecha').className = 'class-oculto'
+    fecha.style.borderColor = '#29c424'
+  }
+
+  if(datos.value === ""){
+    document.getElementById('label-datos').className = 'class-invalido'
+    datos.style.borderColor = '#e22b2b'
+  }else {
+    document.getElementById('label-datos').className = 'class-oculto'
+    datos.style.borderColor = '#29c424'
+  }
+
+  if(zonas=== ""){
+    document.getElementById('label-fav').className = 'class-invalido'
+  }else {
+    document.getElementById('label-fav').className = 'class-oculto'
+  }
+ 
+  if(fav?.value === undefined){
+    document.getElementById('label-radio').className = 'class-invalido'
+  }else {
+    document.getElementById('label-radio').className = 'class-oculto'
   }
 })

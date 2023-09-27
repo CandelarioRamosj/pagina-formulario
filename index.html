@@ -44,9 +44,11 @@
 
 					<label class="titulos" for="fecha">¿Cuándo fue que empezaste a jugar?</label>
 					<input class="bloque cuadro medidas respuesta" type="date" name="fecha" id="fecha">
+          <label class="class-oculto" id="label-fecha">Debe seleccionar una fecha valida. Recuerda que Hollow Knight se estreno el 24-02-2017.</label>
 
 					<p class="titulos">¿Dirías que Hollow Knight es tu videojuego favorito?</p>
-					<input type="radio" id="miFav" name="fav" value="miFav" checked>
+          <label class="class-oculto" id="label-radio">Por favor seleccione una opción.</label>
+					<input type="radio" id="miFav" name="fav" value="miFav">
 					<label for="miFav" class="respuesta">¡Por supuesto! Me encanta</label><br>
 					<input type="radio" id="like" name="fav" value="like">
 					<label for="like" class="respuesta">No exactamente, pero si me gusta</label><br>
@@ -102,9 +104,11 @@
 					</div>
 					</div>
 					</div>
+          <label class="class-oculto" id="label-fav">Por favor seleccione al menos una zona.</label>
 
 					<label for="datos" class="titulos">¿Qué opinas del juego en general?</label>
 					<textarea class="bloque cuadro medidas respuesta" name="datos" id="datos" cols="30" rows="2"></textarea><br>
+          <label class="class-oculto" id="label-datos">Por favor agrege un comentario acerca del juego.</label>
 
 					<input style="margin-bottom: 5vh;" type="button" id="enviar" value="Enviar" class="medidas respuesta">
 				</form>
