@@ -3,6 +3,7 @@ let boton = document.getElementById('enviar')
 boton.addEventListener('click',function(e){
  e.preventDefault()
   
+ let contador = 0
   //Extraer cada input 
   let nombre = document.getElementById('name')
   let edad = document.getElementById('edad')
@@ -24,6 +25,7 @@ boton.addEventListener('click',function(e){
   }else {
     document.getElementById('label-name').className = 'class-oculto'
     nombre.style.borderColor = '#29c424'
+    contador = contador + 1
   }
 
   if(edad.value < 1 || edad.value > 100){
@@ -32,6 +34,7 @@ boton.addEventListener('click',function(e){
   }else {
     document.getElementById('label-edad').className = 'class-oculto'
     edad.style.borderColor = '#29c424'
+    contador = contador + 1
   }
 
   let validaremail = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/
@@ -43,6 +46,7 @@ boton.addEventListener('click',function(e){
   }else {
     document.getElementById('label-email').className = 'class-oculto'
     email.style.borderColor = '#29c424'
+    contador = contador + 1
   }
 
   if(info.value === ""){
@@ -51,6 +55,7 @@ boton.addEventListener('click',function(e){
   }else {
     document.getElementById('label-info').className = 'class-oculto'
     info.style.borderColor = '#29c424'
+    contador = contador + 1
   }
 
   let fechaEstreno = '2017-02-24'
@@ -65,6 +70,7 @@ boton.addEventListener('click',function(e){
   }else {
     document.getElementById('label-fecha').className = 'class-oculto'
     fecha.style.borderColor = '#29c424'
+    contador = contador + 1
   }
 
   if(datos.value === ""){
@@ -73,17 +79,26 @@ boton.addEventListener('click',function(e){
   }else {
     document.getElementById('label-datos').className = 'class-oculto'
     datos.style.borderColor = '#29c424'
+    contador = contador + 1
   }
 
   if(zonas=== ""){
     document.getElementById('label-fav').className = 'class-invalido'
   }else {
     document.getElementById('label-fav').className = 'class-oculto'
+    contador = contador + 1
   }
  
   if(fav?.value === undefined){
     document.getElementById('label-radio').className = 'class-invalido'
   }else {
     document.getElementById('label-radio').className = 'class-oculto'
+    contador = contador + 1
+  }
+  
+  //enviar el formulario 
+  if(contador === 8){
+    document.getElementById('formulario').submit()
+    alert('Formulario Enviado 🫡')
   }
 })
